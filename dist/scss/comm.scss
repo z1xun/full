@@ -1,0 +1,106 @@
+@charset "utf-8";
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(180deg, #dbe9f6 15%, #fefcc9 44%, #f7d0d5 100%);
+    backdrop-filter: blur(10px);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.slide-wrap {
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            width: 100%;
+            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    .slide-cover {
+        position: relative;
+        width: 60%;
+        height: 80%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            vertical-align: top;
+            max-width: 100%;
+            transition: all 1s;
+            &:hover {
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .slide-desc {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 30%;
+        height: 80%;
+        .desc {
+            padding: 0px;
+            color: #151515;
+            li {
+                margin-bottom: 0.625rem;
+                line-height: 1.5;
+                span {
+                    &:nth-child(1) {
+                        font-weight: 600;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+        .link {
+            a {
+                padding: 8px 16px;
+                border-radius: 5px;
+                color: #42aaf9;
+                font-size: 0.875rem;
+                font-weight: 700;
+                border: 2px solid;
+                border-top-width: 1px;
+                border-left-width: 1px;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #42aaf9;
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.section-1 {
+    background: #dbe9f6;
+    backdrop-filter: blur(10px);
+    h2 {
+        font-weight: 600;
+        font-size: 1.75rem;
+        color: #fff;
+    }
+}
