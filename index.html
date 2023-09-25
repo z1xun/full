@@ -9,6 +9,11 @@
         <meta name="author" content="강지선" />
         <title>웹퍼블리셔 강지선 포트폴리오</title>
 
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+        <!-- css -->
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css"
             rel="stylesheet"
@@ -19,25 +24,37 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" type="text/css" href="./dist/css/comm.css" />
+
+        <!-- script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
         <script src="/dist/js/comm.js"></script>
     </head>
     <body>
         <header>
-            <!-- <nav class="gnb">
-                <ul>
-                    <li><a href="#firstPage">HOME</a></li>
-                    <li><a href="#secondPage">PROFILE</a></li>
-                    <li><a href="#thirdPage">포폴1</a></li>
-                    <li><a href="#fourthPage">포폴2</a></li>
-                    <li><a href="#fifthPage">포폴3</a></li>
-                </ul>
-            </nav> -->
+            <nav class="gnb-wrap">
+                <input type="checkbox" name="gnbNav" id="gnbNav" class="input-burger" />
+                <label for="gnbNav" class="label-burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <div id="gnb">
+                    <ul>
+                        <li><a href="#firstPage">HOME</a></li>
+                        <li><a href="#secondPage">PROFILE</a></li>
+                        <li><a href="#thirdPage">포폴1</a></li>
+                        <li><a href="#fourthPage">포폴2</a></li>
+                        <li><a href="#fifthPage">포폴3</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <main id="fullPage">
             <section class="section section-1" data-anchor="firstPage">
-                <div class="inner"><h2>KANG JI SEON PORTFOLIO</h2></div>
+                <div class="home-wrap">
+                    <div class="home-tit"><h2>KANG JI SEON PORTFOLIO</h2></div>
+                </div>
             </section>
             <section class="section section-2" data-anchor="secondPage">
                 <div class="inner">
@@ -59,7 +76,7 @@
                                 <li><span>TOOL</span> <span> Figma, HTML, CSS, JS(jQuery)</span></li>
                                 <li>
                                     <span>PROCESS</span>
-                                    <span>Swiper Js, Slick, Gnuboard, Googlemap Api, Platpicker, Php included</span>
+                                    <span>Swiper Js, Slick, Gnuboard, Googlemap Api, Platpicker</span>
                                 </li>
                                 <li>
                                     <span>참여도</span>
@@ -78,10 +95,10 @@
                     </div>
                 </div>
             </section>
-            <section class="section" data-anchor="fourthPage">
+            <section class="section section-4" data-anchor="fourthPage">
                 <h2>portfolio2</h2>
             </section>
-            <section class="section" data-anchor="fifthPage">
+            <section class="section section-5" data-anchor="fifthPage">
                 <h2>portfolio3</h2>
             </section>
         </main>

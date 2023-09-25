@@ -4,11 +4,14 @@
 }
 
 body {
-  background: linear-gradient(180deg, #dbe9f6 15%, #fefcc9 44%, #f7d0d5 100%);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: linear-gradient(#fde4e8 25%, #fff);
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+}
+
+header {
+  position: fixed;
+  z-index: 1000;
 }
 
 .slide-wrap {
@@ -28,7 +31,7 @@ body {
   border-radius: 20px;
   width: 100%;
   opacity: 0.8;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .inner {
@@ -58,10 +61,10 @@ body {
   z-index: 1;
   width: 30%;
   height: 80%;
+  color: #45739a;
 }
 .inner .slide-desc .desc {
   padding: 0px;
-  color: #151515;
 }
 .inner .slide-desc .desc li {
   margin-bottom: 0.625rem;
@@ -74,7 +77,7 @@ body {
 .inner .slide-desc .link a {
   padding: 8px 16px;
   border-radius: 5px;
-  color: #42aaf9;
+  color: #728ba9;
   font-size: 0.875rem;
   font-weight: 700;
   border: 2px solid;
@@ -83,17 +86,48 @@ body {
   transition: 0.3s;
 }
 .inner .slide-desc .link a:hover {
-  background-color: #42aaf9;
+  background-color: #728ba9;
   border-color: #fff;
   color: #fff;
 }
 
 .section-1 {
-  background: #dbe9f6;
+  background: linear-gradient(to bottom, #fde4e8 70%, #fff);
+}
+.section-1 .home-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(to bottom, #f7d0d5, #45739a);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: circle 4s infinite alternate;
+  transition: width 0.6s, height 0.6s, opacity 0.6s;
+  opacity: 0;
+}
+.section-1 .home-wrap h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: #fff;
+}
+@keyframes circle {
+  0% {
+    box-shadow: inset 50px 10px 100px rgba(251, 251, 251, 0.5);
+  }
+  100% {
+    box-shadow: inset -100px 10px 100px rgba(251, 251, 251, 0.2);
+  }
+}
+
+.section-2 {
+  background: linear-gradient(#728ba9, #fde4e8 80%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-.section-1 h2 {
+.section-2 h2 {
   font-weight: 600;
   font-size: 1.75rem;
   color: #fff;
