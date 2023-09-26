@@ -6,7 +6,6 @@ $(document).ready(function () {
         anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
-                $(".about-img, .info-title, .info-cont, .slide-item").removeClass("show");
                 $(".home-wrap").css({
                     width: "450px",
                     height: "450px",
@@ -27,5 +26,8 @@ $(document).ready(function () {
                 });
             }
         },
+    });
+    $("nav ul.menu__box li").click(function () {
+        $("#menu__toggle").prop("checked", false);
     });
 });
