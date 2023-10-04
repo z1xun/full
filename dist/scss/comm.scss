@@ -153,6 +153,53 @@ header {
     }
 }
 
+//info
+.section-2 {
+    background: linear-gradient(#728ba9, #fde4e8 80%);
+    backdrop-filter: blur(10px);
+    .profile-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        .left {
+            width: 45%;
+            .profile-img {
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    max-width: 430px;
+                    height: 100%;
+                    display: block;
+                    border: 2px solid #fff;
+                    border-top-right-radius: 60px;
+                    border-bottom-left-radius: 60px;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 430px;
+                    border-top-right-radius: 60px;
+                    border-bottom-left-radius: 60px;
+                }
+            }
+        }
+        .right {
+            width: 45%;
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 1.75rem;
+            line-height: 1.5;
+            color: #fff;
+        }
+    }
+}
+
 //portfolio1
 .slide-wrap {
     position: relative;
@@ -236,51 +283,6 @@ header {
                     color: #fff;
                 }
             }
-        }
-    }
-}
-
-.section-2 {
-    background: linear-gradient(#728ba9, #fde4e8 80%);
-    backdrop-filter: blur(10px);
-    .profile-wrap {
-        display: flex;
-        justify-content: space-between;
-        width: 80%;
-        margin: 0 auto;
-        .left {
-            width: 45%;
-            .profile-img {
-                position: relative;
-                &::after {
-                    content: "";
-                    width: 430px;
-                    height: 100%;
-                    display: block;
-                    border: 2px solid #fff;
-                    border-top-right-radius: 60px;
-                    border-bottom-left-radius: 60px;
-                    position: absolute;
-                    top: 20px;
-                    left: 20px;
-                }
-
-                img {
-                    width: 100%;
-                    max-width: 430px;
-                    border-top-right-radius: 60px;
-                    border-bottom-left-radius: 60px;
-                }
-            }
-        }
-        .right {
-            width: 45%;
-        }
-        h2 {
-            font-weight: 600;
-            font-size: 1.75rem;
-            line-height: 1.5;
-            color: #fff;
         }
     }
 }
