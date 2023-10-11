@@ -6,9 +6,10 @@
 }
 
 body {
-    background: linear-gradient(#fde4e8 25%, #fff);
+    background: #fde4e8;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    cursor: none !important;
 }
 // header
 header {
@@ -70,17 +71,17 @@ header {
         position: fixed;
         text-align: center;
         top: 0;
-        right: -40%;
-        width: 40%;
+        right: -30%;
+        width: 30%;
         height: 100%;
         margin: 0;
-        padding: 80px 0;
+        padding: 10em 0;
         list-style: none;
         background-color: rgba(74, 64, 76, 0.8);
 
         transition-duration: 0.25s;
         li {
-            font-size: 2.5rem;
+            font-size: 1.5em;
             font-weight: 600;
             line-height: 2.5;
             a {
@@ -90,7 +91,7 @@ header {
     }
 }
 
-//f
+//사이드내비
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
     background: #dc9cb9;
@@ -164,6 +165,20 @@ header {
         margin: 0 auto;
         .left {
             width: 45%;
+            h2 {
+                position: relative;
+                &::before {
+                    content: "";
+                    background: url(/dist/images/Portal.png) no-repeat 0 0;
+                    width: 50px;
+                    height: 60px;
+                    object-fit: cover;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
             .profile-img {
                 position: relative;
                 &::after {
@@ -207,20 +222,24 @@ header {
     height: 80vh;
     margin: 0 auto;
     overflow: hidden;
+    border-radius: 20px;
 
-    &:hover {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            width: 100%;
-            opacity: 0.8;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        width: 100%;
+        opacity: 0.8;
+
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+    }
+    &:hover::before {
+        transform: translateX(0); /* 마우스 오버 상태일 때 변화시킬 트랜스폼 값 설정 */
     }
 }
 .inner {
@@ -284,5 +303,23 @@ header {
                 }
             }
         }
+    }
+}
+
+#mouse-pointer {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    background-color: #f8e4be;
+    mix-blend-mode: difference;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.3s;
+    &.hover {
+        transform: scale(3);
     }
 }

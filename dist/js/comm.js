@@ -30,4 +30,26 @@ $(document).ready(function () {
     $("nav ul.menu__box li").click(function () {
         $("#menu__toggle").prop("checked", false);
     });
+
+    $(".slide-wrap").mouseover(function () {});
+
+    var $mousePointer = $("#mouse-pointer"),
+        $clickElements = $("a, label");
+
+    function moverCursor(e) {
+        $mousePointer.css({
+            left: e.pageX,
+            top: e.pageY,
+        });
+    }
+    $clickElements.mouseenter(function () {
+        console.log("dddd");
+        $mousePointer.addClass("hover");
+    });
+    $clickElements.mouseleave(function () {
+        console.log("dddd");
+        $mousePointer.removeClass("hover");
+    });
+
+    $(window).on("mousemove", moverCursor);
 });

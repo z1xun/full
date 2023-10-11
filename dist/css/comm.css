@@ -1,12 +1,14 @@
+@charset "UTF-8";
 * {
   list-style: none;
   text-decoration: none;
 }
 
 body {
-  background: linear-gradient(#fde4e8 25%, #fff);
+  background: #fde4e8;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  cursor: none !important;
 }
 
 header {
@@ -68,17 +70,17 @@ header .menu__box {
   position: fixed;
   text-align: center;
   top: 0;
-  right: -40%;
-  width: 40%;
+  right: -30%;
+  width: 30%;
   height: 100%;
   margin: 0;
-  padding: 80px 0;
+  padding: 10em 0;
   list-style: none;
   background-color: rgba(74, 64, 76, 0.8);
   transition-duration: 0.25s;
 }
 header .menu__box li {
-  font-size: 2.5rem;
+  font-size: 1.5em;
   font-weight: 600;
   line-height: 2.5;
 }
@@ -160,6 +162,21 @@ header .menu__box li a {
 .section-2 .profile-wrap .left {
   width: 45%;
 }
+.section-2 .profile-wrap .left h2 {
+  position: relative;
+}
+.section-2 .profile-wrap .left h2::before {
+  content: "";
+  background: url(/dist/images/Portal.png) no-repeat 0 0;
+  width: 50px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 .section-2 .profile-wrap .left .profile-img {
   position: relative;
 }
@@ -198,18 +215,23 @@ header .menu__box li a {
   height: 80vh;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 20px;
 }
-.slide-wrap:hover::before {
+.slide-wrap::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 20px;
   width: 100%;
   opacity: 0.8;
   background-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+.slide-wrap:hover::before {
+  transform: translateX(0); /* 마우스 오버 상태일 때 변화시킬 트랜스폼 값 설정 */
 }
 
 .inner {
@@ -267,4 +289,22 @@ header .menu__box li a {
   background-color: #728ba9;
   border-color: #fff;
   color: #fff;
+}
+
+#mouse-pointer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  background-color: #f8e4be;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+#mouse-pointer.hover {
+  transform: scale(3);
 }/*# sourceMappingURL=comm.css.map */
