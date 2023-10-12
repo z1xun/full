@@ -1,12 +1,16 @@
 @charset "utf-8";
 
+$txt-color: #fff;
+$bg-color: #1a1a1a;
+$w: #fff;
+
 * {
     list-style: none;
     text-decoration: none;
+    color: $w;
 }
-
 body {
-    background: #fde4e8;
+    background: $bg-color;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     cursor: none !important;
@@ -53,7 +57,7 @@ header {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: #dfb0c5;
+        background-color: $w;
         transition-duration: 0.25s;
     }
     .menu__btn > span::before {
@@ -94,7 +98,7 @@ header {
 //사이드내비
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: #dc9cb9;
+    background: $w;
 }
 #fp-nav ul li a.active span {
     background: url(/dist/images/nav_active.png) no-repeat 0 0;
@@ -122,7 +126,7 @@ header {
 
 //home
 .section-1 {
-    background: linear-gradient(to bottom, #fde4e8 70%, #fff);
+    // background: linear-gradient(to bottom, #fde4e8 70%, #fff);
 
     .home-wrap {
         display: flex;
@@ -131,7 +135,9 @@ header {
         position: fixed;
         top: 50%;
         left: 50%;
-        background: linear-gradient(to bottom, #f7d0d5, #45739a);
+        // background: linear-gradient(to bottom, #f7d0d5, #45739a);
+        background: linear-gradient(to bottom, #303030, #000000);
+
         border-radius: 50%;
         transform: translate(-50%, -50%);
         animation: circle 4s infinite alternate;
@@ -140,7 +146,7 @@ header {
         h2 {
             font-weight: 600;
             font-size: 1.75rem;
-            color: #fff;
+            color: #dbdbdb;
         }
     }
     @keyframes circle {
@@ -154,18 +160,34 @@ header {
     }
 }
 
-//info
+//about
 .section-2 {
-    background: linear-gradient(#728ba9, #fde4e8 80%);
-    backdrop-filter: blur(10px);
+    background: $bg-color;
+
     .profile-wrap {
         display: flex;
         justify-content: space-between;
         width: 80%;
         margin: 0 auto;
+
+        @keyframes animate {
+            0% {
+                background-position: -500%;
+            }
+            100% {
+                background-position: 500%;
+            }
+        }
         .left {
-            width: 45%;
+            width: 30%;
             h2 {
+                font-weight: 600;
+                font-size: 1.75rem;
+                line-height: 1.5;
+                color: $w;
+            }
+
+            .profile-img {
                 position: relative;
                 &::before {
                     content: "";
@@ -175,12 +197,9 @@ header {
                     object-fit: cover;
                     display: block;
                     position: absolute;
-                    top: 0;
+                    top: -30px;
                     right: 0;
                 }
-            }
-            .profile-img {
-                position: relative;
                 &::after {
                     content: "";
                     width: 100%;
@@ -202,15 +221,48 @@ header {
                     border-bottom-left-radius: 60px;
                 }
             }
+            .tag {
+                margin-top: 20px;
+            }
         }
         .right {
             width: 45%;
+            .profile-depth1 {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 0;
+                // color: #3d6688;
+                color: $w;
+                h4 {
+                    margin: 0 0 20px;
+                }
+                .profile-depth2 {
+                    padding: 0;
+                    li {
+                        margin-bottom: 12px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        span {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
         }
-        h2 {
-            font-weight: 600;
-            font-size: 1.75rem;
-            line-height: 1.5;
-            color: #fff;
+    }
+}
+.section.active {
+    .slide-wrap {
+        &::before {
+            transform: translateX(0); /* 마우스 오버 상태일 때 변화시킬 트랜스폼 값 설정 */
+        }
+        .slide-cover {
+            img {
+                transform: translateY(-50%);
+            }
         }
     }
 }
@@ -233,13 +285,10 @@ header {
         height: 100%;
         width: 100%;
         opacity: 0.8;
+        background-color: rgba(255, 255, 255, 0.2);
 
-        background-color: rgba(255, 255, 255, 0.5);
         transform: translateX(-100%);
         transition: transform 0.6s;
-    }
-    &:hover::before {
-        transform: translateX(0); /* 마우스 오버 상태일 때 변화시킬 트랜스폼 값 설정 */
     }
 }
 .inner {
@@ -257,10 +306,8 @@ header {
         img {
             vertical-align: top;
             max-width: 100%;
-            transition: all 1s;
-            &:hover {
-                transform: translateY(-50%);
-            }
+            transition: all 3s;
+            transition-delay: 0.5s;
         }
     }
     .slide-desc {
@@ -269,7 +316,7 @@ header {
         z-index: 1;
         width: 30%;
         height: 80%;
-        color: #45739a;
+        color: $txt-color;
         .desc {
             padding: 0px;
 
@@ -288,7 +335,7 @@ header {
             a {
                 padding: 8px 16px;
                 border-radius: 5px;
-                color: #728ba9;
+                color: $w;
                 font-size: 0.875rem;
                 font-weight: 700;
                 border: 2px solid;
@@ -297,9 +344,9 @@ header {
                 transition: 0.3s;
 
                 &:hover {
-                    background-color: #728ba9;
-                    border-color: #fff;
-                    color: #fff;
+                    background-color: #2a2a2a;
+                    border-color: $w;
+                    color: $w;
                 }
             }
         }
@@ -314,7 +361,8 @@ header {
     left: 50%;
     margin: -10px 0 0 -10px;
     border-radius: 50%;
-    background-color: #f8e4be;
+    background: #eee;
+    // mix-blend-mode: soft-light;
     mix-blend-mode: difference;
     z-index: 9999;
     pointer-events: none;
