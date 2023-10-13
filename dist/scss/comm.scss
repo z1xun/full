@@ -81,7 +81,8 @@ header {
         margin: 0;
         padding: 10em 0;
         list-style: none;
-        background-color: rgba(74, 64, 76, 0.8);
+        background: rgb(87, 78, 75, 0.9);
+        backdrop-filter: blur(5px);
 
         transition-duration: 0.25s;
         li {
@@ -180,25 +181,84 @@ header {
         }
         .left {
             width: 30%;
-            h2 {
-                font-weight: 600;
-                font-size: 1.75rem;
-                line-height: 1.5;
-                color: $w;
+
+            //프로필타이틀
+            .profile-tit {
+                @keyframes fade-in {
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                span {
+                    display: inline-block;
+                    overflow: hidden;
+                    position: relative;
+                    top: 0.8rem;
+                    animation: 0.3s swift-up ease-in-out forwards;
+                }
+
+                i {
+                    font-style: normal;
+                    position: relative;
+                    top: 2rem;
+                    animation: 0.5s swift-up ease-in-out forwards;
+                }
+
+                @keyframes swift-up {
+                    to {
+                        top: 0rem;
+                    }
+                }
+
+                span:nth-of-type(1) i {
+                    animation-delay: 0s;
+                }
+
+                span:nth-of-type(2) i {
+                    animation-delay: 0.1s;
+                }
+
+                span:nth-of-type(3) i {
+                    animation-delay: 0.2s;
+                }
+
+                span:nth-of-type(4) i {
+                    animation-delay: 0.3s;
+                }
+
+                span:nth-of-type(1) {
+                    animation-delay: 0s;
+                }
+
+                span:nth-of-type(2) {
+                    animation-delay: 0.1s;
+                }
+
+                span:nth-of-type(3) {
+                    animation-delay: 0.2s;
+                }
+                span:nth-of-type(3) {
+                    animation-delay: 0.3s;
+                }
+                span:nth-of-type(4) {
+                    animation-delay: 0.4s;
+                }
             }
 
+            //프로필이미지
             .profile-img {
                 position: relative;
                 &::before {
                     content: "";
                     background: url(/dist/images/Portal.png) no-repeat 0 0;
-                    width: 50px;
+                    width: 65px;
                     height: 60px;
                     object-fit: cover;
                     display: block;
                     position: absolute;
-                    top: -30px;
-                    right: 0;
+                    top: 0;
+                    right: -30px;
                 }
                 &::after {
                     content: "";
@@ -210,8 +270,7 @@ header {
                     border-top-right-radius: 60px;
                     border-bottom-left-radius: 60px;
                     position: absolute;
-                    top: 20px;
-                    left: 20px;
+                    top: -3px;
                 }
 
                 img {
@@ -233,7 +292,6 @@ header {
                 flex-direction: column;
                 justify-content: space-between;
                 padding-left: 0;
-                // color: #3d6688;
                 color: $w;
                 h4 {
                     margin: 0 0 20px;
@@ -254,20 +312,25 @@ header {
         }
     }
 }
+
+//풀페이지 액티브효과
 .section.active {
     .slide-wrap {
         &::before {
-            transform: translateX(0); /* 마우스 오버 상태일 때 변화시킬 트랜스폼 값 설정 */
+            transform: translateX(0);
         }
         .slide-cover {
-            img {
-                transform: translateY(-50%);
+            .mimesis {
+                transform: translateY(-55%);
+            }
+            .surffy {
+                transform: translateY(-72%);
             }
         }
     }
 }
 
-//portfolio1
+//포트폴리오 섹션 공통
 .slide-wrap {
     position: relative;
     width: 80%;
@@ -286,9 +349,8 @@ header {
         width: 100%;
         opacity: 0.8;
         background-color: rgba(255, 255, 255, 0.2);
-
         transform: translateX(-100%);
-        transition: transform 0.6s;
+        transition: transform 0.4s;
     }
 }
 .inner {
@@ -308,6 +370,11 @@ header {
             max-width: 100%;
             transition: all 3s;
             transition-delay: 0.5s;
+
+            &.surffy {
+                transition: all 5s;
+                transition-delay: 0.5s;
+            }
         }
     }
     .slide-desc {
@@ -353,6 +420,7 @@ header {
     }
 }
 
+//마우스효과
 #mouse-pointer {
     position: absolute;
     width: 20px;

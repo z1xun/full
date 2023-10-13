@@ -31,8 +31,6 @@ $(document).ready(function () {
         $("#menu__toggle").prop("checked", false);
     });
 
-    $(".slide-wrap").mouseover(function () {});
-
     var $mousePointer = $("#mouse-pointer"),
         $clickElements = $("a, label");
 
@@ -52,4 +50,8 @@ $(document).ready(function () {
     });
 
     $(window).on("mousemove", moverCursor);
+
+    // setInterval(function () {
+    //     window.location.reload();
+    // }, 5000);
 });
