@@ -3,7 +3,7 @@
 $txt-color: #fff;
 $bg-color: #1a1a1a;
 $w: #fff;
-
+$b: #000;
 * {
     list-style: none;
     text-decoration: none;
@@ -182,70 +182,6 @@ header {
         .left {
             width: 30%;
 
-            //프로필타이틀
-            .profile-tit {
-                @keyframes fade-in {
-                    to {
-                        opacity: 1;
-                    }
-                }
-
-                span {
-                    display: inline-block;
-                    overflow: hidden;
-                    position: relative;
-                    top: 0.8rem;
-                    animation: 0.3s swift-up ease-in-out forwards;
-                }
-
-                i {
-                    font-style: normal;
-                    position: relative;
-                    top: 2rem;
-                    animation: 0.5s swift-up ease-in-out forwards;
-                }
-
-                @keyframes swift-up {
-                    to {
-                        top: 0rem;
-                    }
-                }
-
-                span:nth-of-type(1) i {
-                    animation-delay: 0s;
-                }
-
-                span:nth-of-type(2) i {
-                    animation-delay: 0.1s;
-                }
-
-                span:nth-of-type(3) i {
-                    animation-delay: 0.2s;
-                }
-
-                span:nth-of-type(4) i {
-                    animation-delay: 0.3s;
-                }
-
-                span:nth-of-type(1) {
-                    animation-delay: 0s;
-                }
-
-                span:nth-of-type(2) {
-                    animation-delay: 0.1s;
-                }
-
-                span:nth-of-type(3) {
-                    animation-delay: 0.2s;
-                }
-                span:nth-of-type(3) {
-                    animation-delay: 0.3s;
-                }
-                span:nth-of-type(4) {
-                    animation-delay: 0.4s;
-                }
-            }
-
             //프로필이미지
             .profile-img {
                 position: relative;
@@ -257,8 +193,8 @@ header {
                     object-fit: cover;
                     display: block;
                     position: absolute;
-                    top: 0;
-                    right: -30px;
+                    top: -3%;
+                    right: 1%;
                 }
                 &::after {
                     content: "";
@@ -266,7 +202,7 @@ header {
                     max-width: 430px;
                     height: 100%;
                     display: block;
-                    border: 2px solid #fff;
+                    border: 2px solid $w;
                     border-top-right-radius: 60px;
                     border-bottom-left-radius: 60px;
                     position: absolute;
@@ -282,6 +218,17 @@ header {
             }
             .tag {
                 margin-top: 20px;
+
+                span {
+                    background: #c4c2c2;
+                    color: $b;
+                    border: 2px solid $w;
+                    border-radius: 20px;
+                    padding: 4px 3px;
+                    margin-right: 8px;
+
+                    font-size: 14px;
+                }
             }
         }
         .right {
@@ -326,6 +273,68 @@ header {
             .surffy {
                 transform: translateY(-72%);
             }
+        }
+    }
+    .profile-tit {
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+            }
+        }
+
+        span {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            top: 0.8rem;
+            animation: 0.3s swift-up ease-in-out forwards;
+        }
+
+        i {
+            font-style: normal;
+            position: relative;
+            top: 2rem;
+            animation: 0.5s swift-up ease-in-out forwards;
+        }
+
+        @keyframes swift-up {
+            to {
+                top: 0rem;
+            }
+        }
+
+        span:nth-of-type(1) i {
+            animation-delay: 0s;
+        }
+
+        span:nth-of-type(2) i {
+            animation-delay: 0.1s;
+        }
+
+        span:nth-of-type(3) i {
+            animation-delay: 0.2s;
+        }
+
+        span:nth-of-type(4) i {
+            animation-delay: 0.3s;
+        }
+
+        span:nth-of-type(1) {
+            animation-delay: 0s;
+        }
+
+        span:nth-of-type(2) {
+            animation-delay: 0.1s;
+        }
+
+        span:nth-of-type(3) {
+            animation-delay: 0.2s;
+        }
+        span:nth-of-type(3) {
+            animation-delay: 0.3s;
+        }
+        span:nth-of-type(4) {
+            animation-delay: 0.4s;
         }
     }
 }
