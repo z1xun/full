@@ -2,11 +2,11 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content="강지선 포트폴리오 사이트" />
-        <meta name="description" content="웹퍼블리셔 강지선 포트폴리오 사이트입니다." />
-        <meta name="keywords" content="웹퍼블리셔" />
-        <meta name="author" content="강지선" />
+        <meta name="viewport" tag="width=device-width, initial-scale=1.0" />
+        <meta name="title" tag="강지선 포트폴리오 사이트" />
+        <meta name="description" tag="웹퍼블리셔 강지선 포트폴리오 사이트입니다." />
+        <meta name="keywords" tag="웹퍼블리셔" />
+        <meta name="author" tag="강지선" />
         <title>웹퍼블리셔 강지선 포트폴리오</title>
 
         <!-- favicon -->
@@ -31,22 +31,17 @@
         <script src="/dist/js/comm.js"></script>
     </head>
     <body>
+        <div class="loading"></div>
         <div id="mouse-pointer"></div>
-        <header>
+        <header id="header">
             <nav>
-                <div class="hamburger-menu">
-                    <input id="menu__toggle" type="checkbox" />
-                    <label class="menu__btn" for="menu__toggle">
-                        <span class="bar"></span>
-                    </label>
-                    <ul class="menu__box">
-                        <li><a href="#firstPage">HOME</a></li>
-                        <li><a href="#secondPage">PROFILE</a></li>
-                        <li><a href="#thirdPage">MIMESIS ART MUSEUM</a></li>
-                        <li><a href="#fourthPage">SURFFY BEACH</a></li>
-                        <li><a href="#fifthPage">포폴3dd</a></li>
-                    </ul>
-                </div>
+                <ul class="nav-wrap">
+                    <li><a href="#firstPage">HOME</a></li>
+                    <li><a href="#secondPage">PROFILE</a></li>
+                    <li><a href="#thirdPage">MIMESIS ART MUSEUM</a></li>
+                    <li><a href="#fourthPage">SURFFY BEACH</a></li>
+                    <li><a href="#fifthPage">포폴3dd</a></li>
+                </ul>
             </nav>
         </header>
         <main id="fullPage">
@@ -56,62 +51,58 @@
                 </div>
             </section>
             <section class="section section-2" data-anchor="secondPage">
-                <div class="inner">
-                    <div class="profile-wrap">
-                        <div class="left">
-                            <h1 class="profile-tit">
-                                <span><i>안녕하세요!</i></span>
-                                <span><i>신입</i></span>
-                                <span><i>퍼블리셔</i></span>
-                                <span><i>강지선입니다</i></span>
-                            </h1>
+                <div class="profile-wrap">
+                    <div class="left">
+                        <div class="tag">
+                            <div class="tag__container">
+                                <ul class="tag__container__list">
+                                    <li class="tag__container__list__item">#밝은</li>
+                                    <li class="tag__container__list__item">#도전적인</li>
+                                    <li class="tag__container__list__item">#공감을 잘하는</li>
+                                    <li class="tag__container__list__item">#적응력이 빠른</li>
+                                </ul>
+                            </div>
+                            <div class="tag__desc">웹 퍼블리셔 강지선입니다</div>
+                        </div>
 
-                            <div class="profile-img">
-                                <img src="/dist/images/profile.png" alt="강지선프로필이미지" />
-                            </div>
-                            <div class="tag">
-                                <span>#밝은</span>
-                                <span>#적응력이 빠른</span>
-                                <span>#공감능력</span>
-                                <span>#도전정신</span>
-                                <span>#적극적인</span>
-                            </div>
+                        <div class="profile-img">
+                            <img src="/dist/images/profile.png" alt="강지선프로필이미지" />
                         </div>
-                        <div class="right">
-                            <ul class="profile-depth1">
-                                <li>
-                                    <h4>INFO</h4>
-                                    <ul class="profile-depth2">
-                                        <li>강지선/Kang jiseon</li>
-                                        <li>1997.01.05</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4>EDUCATION</h4>
-                                    <ul class="profile-depth2">
-                                        <li><span>2023.11</span><span>UI/UX 퍼블리셔&프론트엔드 과정 수료</span></li>
-                                        <li><span>2018.02</span><span>신구대학교 글로벌경영과 졸업</span></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4>SKILL</h4>
-                                    <ul class="profile-depth2 skill">
-                                        <li><span>design.</span><span>photoshop, figma</span></li>
-                                        <li>
-                                            <span>develop.</span><span>html, css(scss), javascrip, react, php</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <h4>CERTIFICATE</h4>
-                                    <ul class="profile-depth2">
-                                        <li><span>2023</span> <span>웹디자인기능사 필기 합격</span></li>
-                                        <li><span>2020</span> <span>GTQ 1급</span></li>
-                                        <li><span>2016</span> <span>컴퓨터활용능력 2급</span></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="right">
+                        <ul class="profile-depth1">
+                            <li>
+                                <h4>INFO</h4>
+                                <ul class="profile-depth2">
+                                    <li>강지선/Kang jiseon</li>
+                                    <li>1997.01.05</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>EDUCATION</h4>
+                                <ul class="profile-depth2">
+                                    <li><span>2023.11</span><span>UI/UX 퍼블리셔&프론트엔드 과정 수료</span></li>
+                                    <li><span>2018.02</span><span>신구대학교 글로벌경영과 졸업</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>SKILL</h4>
+                                <ul class="profile-depth2 skill">
+                                    <li><span>photoshop, figma</span></li>
+                                    <li>
+                                        <span>html, css(scss), javascript, react</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>CERTIFICATE</h4>
+                                <ul class="profile-depth2">
+                                    <li><span>2023</span> <span>웹디자인기능사 필기 합격</span></li>
+                                    <li><span>2020</span> <span>GTQ 1급</span></li>
+                                    <li><span>2016</span> <span>컴퓨터활용능력 2급</span></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -175,15 +166,13 @@
                                     target="_blank"
                                     >Prototype</a
                                 >
-                                <a href="http://jsjh59340.cafe24.com/gnuboard5/" target="_blank">Website</a>
+                                <a href="https://z1xun.me/surffybeach/" target="_blank">Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section section-5" data-anchor="fifthPage">
-                <h2>portfolio3</h2>
-            </section>
+            <section class="section section-5" data-anchor="fifthPage"></section>
         </main>
     </body>
 </html>

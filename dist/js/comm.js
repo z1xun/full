@@ -25,12 +25,22 @@ $(document).ready(function () {
                     height: "2000px",
                 });
             }
+            if (nextIndex >= 3) {
+                $("#header").animate(
+                    {
+                        opacity: 1,
+                    },
+                    500
+                );
+            } else {
+                $("#header").animate({
+                    opacity: 0,
+                });
+            }
         },
     });
-    $("nav ul.menu__box li").click(function () {
-        $("#menu__toggle").prop("checked", false);
-    });
 
+    // 마우스커서
     var $mousePointer = $("#mouse-pointer"),
         $clickElements = $("a, label");
 
@@ -50,8 +60,4 @@ $(document).ready(function () {
     });
 
     $(window).on("mousemove", moverCursor);
-
-    // setInterval(function () {
-    //     window.location.reload();
-    // }, 5000);
 });
