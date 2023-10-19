@@ -294,8 +294,9 @@ body {
 }
 
 .section-5 {
-  background: linear-gradient(40deg, rgb(199, 121, 208), rgb(75, 192, 200), #2b3074);
-  animation: huerotator 10s infinite alternate;
+  animation: huerotator 8s infinite alternate;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
 }
 @keyframes huerotator {
   0% {
@@ -327,7 +328,7 @@ body {
   right: 20px;
   bottom: 0;
   border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(68, 68, 68, 0.4);
   z-index: -1;
 }
 .section-5 .wrap .screen-header {

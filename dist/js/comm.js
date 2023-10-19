@@ -51,13 +51,16 @@ $(document).ready(function () {
         });
     }
     $clickElements.mouseenter(function () {
-        console.log("dddd");
         $mousePointer.addClass("hover");
     });
     $clickElements.mouseleave(function () {
-        console.log("dddd");
         $mousePointer.removeClass("hover");
     });
 
     $(window).on("mousemove", moverCursor);
+
+    $(".app-form-button").on("click", function () {
+        console.log("ssss");
+        alert("이메일 전송완료~~");
+    });
 });
