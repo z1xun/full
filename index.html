@@ -23,11 +23,13 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="./dist/css/comm.css" />
 
         <!-- script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+        <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
         <script src="/dist/js/comm.js"></script>
     </head>
     <body>
@@ -40,7 +42,7 @@
                     <li><a href="#secondPage">PROFILE</a></li>
                     <li><a href="#thirdPage">MIMESIS ART MUSEUM</a></li>
                     <li><a href="#fourthPage">SURFFY BEACH</a></li>
-                    <li><a href="#fifthPage">포폴3dd</a></li>
+                    <li><a href="#fifthPage">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
@@ -173,30 +175,98 @@
                 </div>
             </section>
             <section class="section section-5" data-anchor="fifthPage">
-                <h2>contact me</h2>
-                <form
-                    method="post"
-                    action="https://script.google.com/macros/s/AKfycbyz7xWMn5pnB_9sIYLwVLD0zd9GibXgLawQYCHc8HmMwglFIWYgxsjf6GiyyKx0f3IOqw/exec"
-                    class="mt-5 form-contact slideanim"
-                >
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label for="usr" class="blind">이름</label>
-                            <input type="text" class="form-control" id="usr" name="username" value="odada" />
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label for="email" class="blind">답변 받을 이메일</label>
-                            <input type="email" class="form-control" id="email" name="email" value="sample@mail.com" />
+                <div class="wrap">
+                    <div class="container">
+                        <div class="screen">
+                            <div class="screen-header">
+                                <div class="screen-header-left">
+                                    <div class="screen-header-button close"></div>
+                                    <div class="screen-header-button maximize"></div>
+                                    <div class="screen-header-button minimize"></div>
+                                </div>
+                                <div class="screen-header-right">
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                    <div class="screen-header-ellipsis"></div>
+                                </div>
+                            </div>
+                            <div class="screen-body">
+                                <div class="screen-body-item left">
+                                    <div class="app-title">
+                                        <span>CONTACT</span>
+                                        <span>ME</span>
+                                    </div>
+                                    <div class="app-contact">
+                                        <ul class="contact-list">
+                                            <li class="list-item">
+                                                <i class="fa fa-phone fa-2x"
+                                                    ><span class="contact-text phone"
+                                                        ><a href="tel:1-212-555-5555" title="Give me a call"
+                                                            >010-7430-8792</a
+                                                        ></span
+                                                    ></i
+                                                >
+                                            </li>
+
+                                            <li class="list-item">
+                                                <i class="fa fa-envelope fa-2x"
+                                                    ><span class="contact-text gmail"
+                                                        ><a href="mailto:#" title="Send me an email"
+                                                            >jsjh5934@naver.com</a
+                                                        ></span
+                                                    ></i
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="screen-body-item">
+                                    <form
+                                        target="frAttachFiles"
+                                        method="post"
+                                        action="https://script.google.com/macros/s/AKfycbyz7xWMn5pnB_9sIYLwVLD0zd9GibXgLawQYCHc8HmMwglFIWYgxsjf6GiyyKx0f3IOqw/exec"
+                                        class="app-form"
+                                    >
+                                        <div class="app-form-group">
+                                            <label for="usr" class="blind">이름</label>
+                                            <input
+                                                type="text"
+                                                class="app-form-control"
+                                                id="usr"
+                                                name="username"
+                                                placeholder="name"
+                                            />
+                                        </div>
+                                        <div class="app-form-group">
+                                            <label for="email" class="blind">답변 받을 이메일</label>
+                                            <input
+                                                type="email"
+                                                class="app-form-control"
+                                                id="email"
+                                                name="email"
+                                                placeholder="email"
+                                            />
+                                        </div>
+
+                                        <div class="app-form-group message">
+                                            <label for="comment" class="blind">문의 내용</label>
+                                            <textarea
+                                                class="form-control app-form-control"
+                                                rows="5"
+                                                id="comment"
+                                                placeholder="comment"
+                                            ></textarea>
+                                        </div>
+                                        <div class="app-form-group buttons">
+                                            <button class="app-form-button">SEND</button>
+                                        </div>
+                                    </form>
+                                    <iframe name="frAttachFiles" style="display: none"></iframe>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="comment" class="blind">문의 내용</label>
-                        <textarea class="form-control" rows="5" id="comment" placeholder="comment">dd</textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">문의하기</button>
-                </form>
-
+                </div>
                 <script
                     data-cfasync="false"
                     type="text/javascript"
