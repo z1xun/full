@@ -31,11 +31,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
         <script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
         <script src="/dist/js/comm.js"></script>
     </head>
     <body>
-        <div class="loading"></div>
         <div id="mouse-pointer"></div>
         <header id="header">
             <nav>
@@ -120,7 +120,7 @@
                             <h2>MIMESIS ART MUSEUM</h2>
                             <ul class="desc">
                                 <li><span>TYPE</span> <span>Resposive Web</span></li>
-                                <li><span>PAGE</span> <span>Main + Sub*4</span></li>
+                                <li><span>PAGE</span> <span>메인, 소개, 관람안내, 예약, 공지사항</span></li>
                                 <li><span>TOOL</span> <span> Figma, HTML, CSS, JS(jQuery)</span></li>
                                 <li>
                                     <span>PROCESS</span>
@@ -137,6 +137,7 @@
                                     target="_blank"
                                     >Prototype</a
                                 >
+                                <a href="https://github.com/z1xun/mimesis-portfolio" target="_blank">Github</a>
                                 <a href="http://jsjh59340.cafe24.com/gnuboard5/" target="_blank">Website</a>
                             </div>
                         </div>
@@ -165,11 +166,7 @@
                                 </li>
                             </ul>
                             <div class="link">
-                                <!-- <a
-                                    href="https://www.figma.com/file/71ZJOd80eXeKnlxMdOv7AI/mimesisartmuseum-redesign?type=design&mode=design"
-                                    target="_blank"
-                                    >Prototype</a
-                                > -->
+                                <a href="https://github.com/z1xun/surffybeach" target="_blank">Github</a>
                                 <a href="https://z1xun.me/surffybeach/" target="_blank">Website</a>
                             </div>
                         </div>
@@ -260,7 +257,7 @@
                                             ></textarea>
                                         </div>
                                         <div class="app-form-group buttons">
-                                            <button class="app-form-button">SEND</button>
+                                            <button onclick="swal" class="app-form-button">SEND</button>
                                         </div>
                                     </form>
                                     <iframe name="frAttachFiles" style="display: none"></iframe>

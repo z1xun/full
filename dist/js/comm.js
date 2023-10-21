@@ -60,7 +60,9 @@ $(document).ready(function () {
     $(window).on("mousemove", moverCursor);
 
     $(".app-form-button").on("click", function () {
-        console.log("ssss");
-        alert("이메일 전송완료~~");
+        swal({
+            title: "이메일 전송완료!🤗",
+            icon: "success",
+        });
     });
 });
