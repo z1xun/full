@@ -1,8 +1,10 @@
 $(document).ready(function () {
     $("#fullPage").fullpage({
-        autoScrolling: true,
-        scrollHorizontally: true,
+        // autoScrolling: true,
+        // scrollHorizontally: true,
         navigation: true,
+        showActiveTooltip: true,
+        navigationTooltips: ["HOME", "PROFILE", "MIMESIS", "SURFFY BEACH", "CONTACT"],
         anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
@@ -25,18 +27,18 @@ $(document).ready(function () {
                     height: "2000px",
                 });
             }
-            if (nextIndex >= 3) {
-                $("#header").animate(
-                    {
-                        opacity: 1,
-                    },
-                    500
-                );
-            } else {
-                $("#header").animate({
-                    opacity: 0,
-                });
-            }
+            // if (nextIndex >= 3) {
+            //     $("#header").animate(
+            //         {
+            //             opacity: 1,
+            //         },
+            //         500
+            //     );
+            // } else {
+            //     $("#header").animate({
+            //         opacity: 0,
+            //     });
+            // }
         },
     });
 

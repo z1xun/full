@@ -30,20 +30,20 @@ body {
 }
 
 // header
-#header {
-    width: 100%;
-    height: 70px;
-    position: fixed;
-    z-index: 1000;
-    backdrop-filter: blur(30px);
+// #header {
+//     width: 100%;
+//     height: 70px;
+//     position: fixed;
+//     z-index: 1000;
+//     backdrop-filter: blur(30px);
 
-    .nav-wrap {
-        display: flex;
-        justify-content: flex-end;
-        margin: 25px 30px;
-        gap: 30px;
-    }
-}
+//     .nav-wrap {
+//         display: flex;
+//         justify-content: flex-end;
+//         margin: 25px 30px;
+//         gap: 30px;
+//     }
+// }
 
 //사이드내비
 #fp-nav ul li a span,
@@ -248,11 +248,8 @@ body {
             transform: translateX(0);
         }
         .slide-cover {
-            .mimesis {
-                transform: translateY(-55%);
-            }
-            .surffy {
-                transform: translateY(-72%);
+            .slide-img {
+                background-position: bottom;
             }
         }
     }
@@ -293,16 +290,19 @@ body {
         border-radius: 20px;
         overflow: hidden;
 
-        img {
-            vertical-align: bottom;
+        .slide-img {
+            background-position: top;
             max-width: 100%;
-            transition: all 3s;
+            transition: all 1s;
             transition-delay: 0.5s;
-
-            &.surffy {
-                transition: all 5s;
-                transition-delay: 0.5s;
-            }
+            height: 100%;
+            background-size: cover;
+        }
+        .mimesis {
+            background: url(../../dist/images/slide1.png) no-repeat 50% 0;
+        }
+        .surffy {
+            background: url(../../dist/images/slide2.png) no-repeat 50% 0;
         }
     }
     .slide-desc {
@@ -347,17 +347,6 @@ body {
         }
     }
 }
-
-//로딩페이지
-// .loading {
-//     width: 100%;
-//     height: 100%;
-//     position: fixed;
-//     left: 0px;
-//     top: 0px;
-//     background: #fff;
-//     z-index: 1000; /* 이 값으로 레이어의 위치를 조정합니다. */
-// }
 
 //contact
 .section-5 {
