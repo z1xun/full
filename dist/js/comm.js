@@ -4,8 +4,8 @@ $(document).ready(function () {
         // scrollHorizontally: true,
         navigation: true,
         showActiveTooltip: true,
-        navigationTooltips: ["HOME", "PROFILE", "MIMESIS", "SURFFY BEACH", "CONTACT"],
-        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"],
+        navigationTooltips: ["HOME", "PROFILE", "MIMESIS", "SURFFY BEACH", "ZARA", "CONTACT"],
+        anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage", "sixPage"],
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
                 $(".home-wrap").css({

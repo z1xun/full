@@ -193,6 +193,9 @@ body {
 .section.active .slide-wrap .slide-cover .slide-img {
   background-position: bottom;
 }
+.section.active .slide-wrap .screen {
+  background-position: bottom;
+}
 
 .slide-wrap {
   position: relative;
@@ -232,7 +235,7 @@ body {
 .inner .slide-cover .slide-img {
   background-position: top;
   max-width: 100%;
-  transition: all 1s;
+  transition: all 1.5s;
   transition-delay: 0.5s;
   height: 100%;
   background-size: cover;
@@ -262,6 +265,9 @@ body {
   font-weight: 600;
   padding-right: 20px;
 }
+.inner .slide-desc .link {
+  margin-top: 20px;
+}
 .inner .slide-desc .link a {
   padding: 8px 16px;
   border-radius: 5px;
@@ -279,7 +285,152 @@ body {
   color: #fff;
 }
 
-.section-5 {
+.section-5 .slide-wrap::before {
+  display: none;
+}
+.section-5 .slide-cover {
+  width: 40%;
+  height: auto;
+}
+.section-5 .inner .slide-desc {
+  width: 40%;
+  justify-content: center;
+}
+.section-5 .iphone-body {
+  height: 840px;
+  width: 394px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: inset 0 0 3px 0 rgba(70, 73, 76, 0.3), 0 0 0 1px rgba(76, 92, 104, 0.3), 0 1px 20px 0px rgba(0, 0, 0, 0.4);
+  border: 5px solid #f2f2f2;
+  border-radius: 50px;
+  margin: 30px auto;
+  position: relative;
+  transform: scale(0.8);
+}
+.section-5 .iphone-top {
+  padding: 5px 110px 40px;
+  position: relative;
+}
+.section-5 .top-section .camera {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 13px;
+  border-radius: 50%;
+  background: #46494c;
+}
+.section-5 .top-section .mic {
+  display: block;
+  width: 70px;
+  height: 6px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #46494c;
+}
+.section-5 .top-section .speaker {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 130px;
+  top: 43px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #46494c;
+}
+.section-5 .top-bar,
+.section-5 .bottom-bar {
+  display: block;
+  position: absolute;
+  width: 423px;
+  height: 15px;
+  border-left: 5px solid #c5c3c6;
+  border-right: 5px solid #c5c3c6;
+  right: -5px;
+}
+.section-5 .top-bar {
+  top: 50px;
+}
+.section-5 .bottom-bar {
+  bottom: 50px;
+}
+.section-5 .screen {
+  height: 667px;
+  width: 375px;
+  background: url(/dist/images/slide3.png) no-repeat 0 0;
+  background-size: cover;
+  background-position: top;
+  margin: 0 auto;
+  border: 1px solid #4c5c68;
+  border-radius: 2px;
+  position: relative;
+  top: 35px;
+  transition: all 1.5s;
+  transition-delay: 0.5s;
+}
+.section-5 .buttons .on-off,
+.section-5 .buttons .sleep,
+.section-5 .buttons .up,
+.section-5 .buttons .down {
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 2px 0 0 2px;
+}
+.section-5 .buttons .on-off {
+  height: 30px;
+  width: 3px;
+  top: 95px;
+  left: -8px;
+}
+.section-5 .buttons .sleep {
+  height: 45px;
+  width: 3px;
+  top: 160px;
+  transform: rotate(180deg);
+  right: -8px;
+}
+.section-5 .buttons .up {
+  height: 45px;
+  width: 3px;
+  top: 160px;
+  left: -8px;
+}
+.section-5 .buttons .down {
+  height: 45px;
+  width: 3px;
+  top: 215px;
+  left: -8px;
+}
+.section-5 .iphone-bottom {
+  padding: 50px 0 0;
+}
+.section-5 .iphone-bottom span {
+  display: block;
+  margin: 0 auto;
+  width: 68px;
+  height: 68px;
+  background: #ccc;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);
+  position: relative;
+}
+.section-5 .iphone-bottom span:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+.section-6 {
   animation: huerotator 8s infinite alternate;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
@@ -292,20 +443,20 @@ body {
     filter: hue-rotate(360deg);
   }
 }
-.section-5 .wrap {
+.section-6 .wrap {
   display: flex;
 }
-.section-5 .wrap .container {
+.section-6 .wrap .container {
   flex: 0 1 800px;
   margin: auto;
   padding: 10px;
 }
-.section-5 .wrap .screen {
+.section-6 .wrap .screen {
   position: relative;
   background: #3e3e3e;
   border-radius: 15px;
 }
-.section-5 .wrap .screen:after {
+.section-6 .wrap .screen:after {
   content: "";
   display: block;
   position: absolute;
@@ -317,7 +468,7 @@ body {
   box-shadow: 0 20px 40px rgba(68, 68, 68, 0.4);
   z-index: -1;
 }
-.section-5 .wrap .screen-header {
+.section-6 .wrap .screen-header {
   display: flex;
   align-items: center;
   padding: 10px 20px;
@@ -325,10 +476,10 @@ body {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-.section-5 .wrap .screen-header-left {
+.section-6 .wrap .screen-header-left {
   margin-right: auto;
 }
-.section-5 .wrap .screen-header-button {
+.section-6 .wrap .screen-header-button {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -336,44 +487,44 @@ body {
   border-radius: 8px;
   background: white;
 }
-.section-5 .wrap .screen-header-button.close {
+.section-6 .wrap .screen-header-button.close {
   background: #ed1c6f;
 }
-.section-5 .wrap .screen-header-button.maximize {
+.section-6 .wrap .screen-header-button.maximize {
   background: #e8e925;
 }
-.section-5 .wrap .screen-header-button.minimize {
+.section-6 .wrap .screen-header-button.minimize {
   background: #74c54f;
 }
-.section-5 .wrap .screen-header-right {
+.section-6 .wrap .screen-header-right {
   display: flex;
 }
-.section-5 .wrap .screen-header-ellipsis {
+.section-6 .wrap .screen-header-ellipsis {
   width: 3px;
   height: 3px;
   margin-left: 2px;
   border-radius: 8px;
   background: #999;
 }
-.section-5 .wrap .screen-body {
+.section-6 .wrap .screen-body {
   display: flex;
 }
-.section-5 .wrap .screen-body-item {
+.section-6 .wrap .screen-body-item {
   flex: 1;
   padding: 50px;
 }
-.section-5 .wrap .screen-body-item.left {
+.section-6 .wrap .screen-body-item.left {
   display: flex;
   flex-direction: column;
 }
-.section-5 .wrap .app-title {
+.section-6 .wrap .app-title {
   display: flex;
   flex-direction: column;
   position: relative;
   color: #ea1d6f;
   font-size: 26px;
 }
-.section-5 .wrap .app-title:after {
+.section-6 .wrap .app-title:after {
   content: "";
   display: block;
   position: absolute;
@@ -383,37 +534,37 @@ body {
   height: 4px;
   background: #ea1d6f;
 }
-.section-5 .wrap .app-contact {
+.section-6 .wrap .app-contact {
   margin-top: auto;
   font-size: 8px;
   color: #888;
 }
-.section-5 .wrap .app-contact .contact-list {
+.section-6 .wrap .app-contact .contact-list {
   margin-left: -30px;
   padding-left: 30px;
 }
-.section-5 .wrap .app-contact .list-item {
+.section-6 .wrap .app-contact .list-item {
   line-height: 3;
   color: #aaa;
 }
-.section-5 .wrap .app-contact .contact-text {
+.section-6 .wrap .app-contact .contact-text {
   letter-spacing: 1.9px;
   padding-left: 15px;
 }
-.section-5 .wrap .app-contact .contact-text a {
+.section-6 .wrap .app-contact .contact-text a {
   font-size: 12px;
 }
-.section-5 .wrap .app-form-group {
+.section-6 .wrap .app-form-group {
   margin-bottom: 15px;
 }
-.section-5 .wrap .app-form-group.message {
+.section-6 .wrap .app-form-group.message {
   margin-top: 40px;
 }
-.section-5 .wrap .app-form-group.buttons {
+.section-6 .wrap .app-form-group.buttons {
   margin-bottom: 0;
   text-align: right;
 }
-.section-5 .wrap .app-form-control {
+.section-6 .wrap .app-form-control {
   width: 100%;
   padding: 10px 0;
   background: none;
@@ -425,20 +576,20 @@ body {
   outline: none;
   transition: border-color 0.2s;
 }
-.section-5 .wrap .app-form-control::-moz-placeholder {
+.section-6 .wrap .app-form-control::-moz-placeholder {
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.section-5 .wrap .app-form-control::placeholder {
+.section-6 .wrap .app-form-control::placeholder {
   color: #666;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.section-5 .wrap .app-form-control:focus {
+.section-6 .wrap .app-form-control:focus {
   border-bottom-color: #ddd;
 }
-.section-5 .wrap .app-form-button {
+.section-6 .wrap .app-form-button {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   background: none;
@@ -448,7 +599,7 @@ body {
   cursor: pointer;
   outline: none;
 }
-.section-5 .wrap .app-form-button:hover {
+.section-6 .wrap .app-form-button:hover {
   color: #b9134f;
 }
 
