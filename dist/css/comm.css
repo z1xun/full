@@ -292,6 +292,9 @@ body {
   height: 80%;
   color: #fff;
 }
+.inner .slide-desc p {
+  line-height: 1.8;
+}
 .inner .slide-desc .desc {
   padding: 0px;
 }
