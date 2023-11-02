@@ -163,7 +163,7 @@ body {
                 height: 160px;
                 overflow: hidden;
                 width: 100%;
-                font-size: 35px;
+                font-size: 2.1875rem;
                 line-height: 40px;
                 color: #ecf0f1;
 
@@ -194,7 +194,7 @@ body {
                         position: absolute;
                         top: 0;
                         color: #f8ff6c;
-                        font-size: 42px;
+                        font-size: 2.625rem;
                         line-height: 40px;
                     }
 
@@ -667,7 +667,7 @@ body {
             flex-direction: column;
             position: relative;
             color: #ea1d6f;
-            font-size: 26px;
+            font-size: 1.625rem;
         }
 
         .app-title:after {
@@ -683,7 +683,7 @@ body {
 
         .app-contact {
             margin-top: auto;
-            font-size: 8px;
+            font-size: 0.5rem;
             color: #888;
 
             .contact-list {
@@ -700,7 +700,7 @@ body {
                 letter-spacing: 1.9px;
                 padding-left: 15px;
                 a {
-                    font-size: 12px;
+                    font-size: 0.75rem;
                 }
             }
         }
@@ -725,7 +725,7 @@ body {
             border: none;
             border-bottom: 1px solid #666;
             color: #ddd;
-            font-size: 14px;
+            font-size: 0.875rem;
             text-transform: uppercase;
             outline: none;
             transition: border-color 0.2s;
@@ -745,7 +745,7 @@ body {
             background: none;
             border: none;
             color: #ea1d6f;
-            font-size: 14px;
+            font-size: 0.875rem;
             cursor: pointer;
             outline: none;
         }
@@ -772,5 +772,167 @@ body {
     transition: transform 0.3s;
     &.hover {
         transform: scale(3);
+    }
+}
+
+@media (max-width: 1440px) {
+    .section-2 .profile-wrap .left {
+        width: 40%;
+    }
+    .section-2 .profile-wrap .left .tag__container {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 1280px) {
+    .section-2 .profile-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        gap: 50px;
+        height: 90vh;
+    }
+    .section-2 .profile-wrap .left {
+        width: 100%;
+        align-items: center;
+    }
+    .section-2 .profile-wrap .right {
+        width: 100%;
+    }
+    .section-2 .profile-wrap .right .profile-depth1 {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .section-2 .profile-wrap .profile-img {
+        width: 30%;
+    }
+    .section-2 .profile-wrap .left .tag {
+        width: 100%;
+        top: -67px;
+    }
+    .section-2 .profile-wrap .left .tag {
+        height: auto;
+    }
+    .section-2 .profile-wrap .left .tag__container::before {
+        left: 27%;
+    }
+    .section-2 .profile-wrap .left .tag__container:after {
+        right: 27%;
+    }
+    .section-2 .profile-wrap .right .profile-depth1 .profile-depth2 li span {
+        display: block;
+    }
+    .slide-wrap {
+        width: 90%;
+    }
+
+    .section-5 .iphone-body {
+        margin: 0;
+    }
+    .section-5 .slide-cover {
+        width: 60%;
+    }
+    .section-5 .inner .slide-desc {
+        width: 40%;
+    }
+}
+@media (max-width: 1024px) {
+    :root {
+        font-size: 14px;
+    }
+    #fp-nav ul li:hover .fp-tooltip,
+    #fp-nav.fp-show-active a.active + .fp-tooltip {
+        display: none;
+    }
+}
+@media (max-width: 834px) {
+    .section-2 .profile-wrap .left .profile-img img {
+        display: none;
+    }
+    .section-2 .profile-wrap .right .profile-depth1 {
+        flex-direction: column;
+    }
+    .section-2 .profile-wrap .right .profile-depth1 {
+        text-align: center;
+    }
+    .section-2 .profile-wrap .right .profile-depth1 .profile-depth2 li span {
+        display: inline-block;
+    }
+    .inner .slide-desc p {
+        display: none;
+    }
+    .section-3 .slide-wrap .inner {
+        flex-direction: column;
+        .slide-cover {
+            width: 82%;
+            margin-top: 60px;
+        }
+        .slide-desc {
+            width: 80%;
+            margin-top: 30px;
+            .link {
+                margin-left: auto;
+            }
+        }
+    }
+    .section-4 .slide-wrap .inner {
+        flex-direction: column;
+        .slide-cover {
+            width: 82%;
+            margin-top: 60px;
+        }
+        .slide-desc {
+            width: 80%;
+            margin-top: 30px;
+            .link {
+                margin-left: auto;
+            }
+        }
+    }
+    .section-6 {
+        background: url(/dist/images/Artboard.png) no-repeat 0 0;
+    }
+
+    .section-6 .wrap .container {
+        flex: 0 1 600px;
+    }
+    .section-5 .iphone-body {
+        scale: 0.6;
+        transform: translateX(-141px);
+    }
+    .section-5 .slide-wrap .inner {
+        justify-content: space-between;
+        .slide-cover {
+            display: none;
+        }
+        .slide-desc {
+            width: 100%;
+            justify-content: normal;
+            position: relative;
+
+            &::after {
+                content: url(/dist/images/mockup.png);
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                bottom: 0;
+                right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .section-2 .profile-wrap .left .tag__container::before {
+        left: 12%;
+    }
+    .section-2 .profile-wrap .left .tag__container:after {
+        right: 12%;
+    }
+}
+@media (max-width: 428px) {
+    :root {
+        font-size: 12px;
     }
 }
