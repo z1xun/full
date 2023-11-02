@@ -18,6 +18,9 @@ $(document).ready(function () {
                     },
                     100
                 );
+                $(".arrow").css({
+                    opacity: 1,
+                });
             }
         },
         onLeave: function (index, nextIndex, direction) {
@@ -25,6 +28,9 @@ $(document).ready(function () {
                 $(".home-wrap").css({
                     width: "4000px",
                     height: "2000px",
+                });
+                $(".arrow").css({
+                    opacity: 0,
                 });
             }
             // if (nextIndex >= 3) {
