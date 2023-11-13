@@ -420,7 +420,7 @@ body {
         border-radius: 50px;
         margin: 30px auto;
         position: relative;
-        transform: scale(0.8);
+        transform: scale(0.6);
     }
 
     .iphone-top {
@@ -916,8 +916,8 @@ body {
                 width: 400px;
                 height: 400px;
                 position: absolute;
-                bottom: 0;
-                right: 10px;
+                bottom: -70px;
+                right: 45px;
             }
         }
     }
@@ -929,6 +929,12 @@ body {
     }
     .section-2 .profile-wrap .left .tag__container:after {
         right: 12%;
+    }
+    .section-6 .wrap .screen-body {
+        flex-direction: column;
+    }
+    .section-6 .wrap .app-title:after {
+        display: none;
     }
 }
 @media (max-width: 428px) {
