@@ -137,7 +137,6 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   height: 160px;
-  overflow: hidden;
   width: 100%;
   font-size: 2.1875rem;
   line-height: 40px;
@@ -147,6 +146,7 @@ body {
   margin-top: 20px;
   font-weight: 600;
   text-align: center;
+  white-space: nowrap;
 }
 .section-2 .profile-wrap .left .tag__container {
   font-weight: 600;
