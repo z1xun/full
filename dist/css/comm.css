@@ -310,6 +310,7 @@ body {
 .inner .slide-desc .desc li {
   margin-bottom: 0.625rem;
   line-height: 1.5;
+  display: flex;
 }
 .inner .slide-desc .desc li span:nth-child(1) {
   font-weight: 600;
@@ -734,6 +735,9 @@ body {
   #fp-nav ul li:hover .fp-tooltip,
   #fp-nav.fp-show-active a.active + .fp-tooltip {
     display: none;
+  }
+  .inner .slide-desc .link a {
+    padding: 8px 8px;
   }
 }
 @media (max-width: 834px) {
